@@ -1,0 +1,917 @@
+@charset "utf-8";
+/* ========== Reseting Default CSS Rules Starts ========== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ========== Reseting Default CSS Rules Ends ========== */
+/*******************************************************************/
+/* ========== Embeded Font Face Kits Starts ========== */
+/* Calibri Italic */
+@font-face {
+    font-family: 'calibriitalic';
+    src: url('../fonts/calibri_italic/calibrii-webfont.eot');
+    src: url('../fonts/calibri_italic/calibrii-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri_italic/calibrii-webfont.woff') format('woff'),
+         url('../fonts/calibri_italic/calibrii-webfont.ttf') format('truetype'),
+         url('../fonts/calibri_italic/calibrii-webfont.svg#calibriitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Calibri Italic */
+/* /////////////////////////// */
+/* Calibri Bold */
+@font-face {
+    font-family: 'calibribold';
+    src: url('../fonts/calibri_bold/calibrib-webfont.eot');
+    src: url('../fonts/calibri_bold/calibrib-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri_bold/calibrib-webfont.woff') format('woff'),
+         url('../fonts/calibri_bold/calibrib-webfont.ttf') format('truetype'),
+         url('../fonts/calibri_bold/calibrib-webfont.svg#calibribold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Calibri Bold */
+/* /////////////////////////// */
+/* Calibri Regular */
+@font-face {
+    font-family: 'calibriregular';
+    src: url('../fonts/calibri_regular/calibri-webfont.eot');
+    src: url('../fonts/calibri_regular/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri_regular/calibri-webfont.woff') format('woff'),
+         url('../fonts/calibri_regular/calibri-webfont.ttf') format('truetype'),
+         url('../fonts/calibri_regular/calibri-webfont.svg#calibriregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Calibri Regular */
+/* ////////////////////////// /*/
+/* Raleway Light */
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway_light/raleway-light-webfont.eot');
+    src: url('../fonts/raleway_light/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway_light/raleway-light-webfont.woff') format('woff'),
+         url('../fonts/raleway_light/raleway-light-webfont.ttf') format('truetype'),
+         url('../fonts/raleway_light/raleway-light-webfont.svg#ralewaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Raleway Light */
+/* ========== Embeded Font Face Kits Ends ========== */
+/*******************************************************************/
+body {
+	background-color: #eeeeee;
+	font-family: 'calibriregular';
+	font-size: 15px;
+	color: #7e7e7e;
+	line-height: 30px;
+}
+p {
+	margin-bottom: 20px;
+}
+.table_cell {
+	display: table;
+	width: 100%;
+}
+.push_left {
+	float: left;
+}
+.push_right {
+	float: right;
+}
+.animateMenu a, .animateMenu li, .animateFive {
+	-webkit-transition: all 0.5s ease 0s;
+	 -khtml-transition: all 0.5s ease 0s;
+	   -moz-transition: all 0.5s ease 0s;
+		-ms-transition: all 0.5s ease 0s;
+		 -o-transition: all 0.5s ease 0s;
+			transition: all 0.5s ease 0s;
+}
+/*******************************************************************/
+/* ========== Menu Bar CSS Rules Starts ========== */
+.top_strip {
+	height: 10px;
+	background-color: #323a45;	
+}
+.nav_holder {
+	width: 1200px;
+	margin: auto;
+	position: relative;
+	margin-top: -10px;
+}
+.nav_holder nav ul li, .nav_holder nav ul li a {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+.nav_holder nav ul li {
+	float: left;
+	font-family: 'calibribold';
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav_holder nav ul li a {
+	background-color: #01afd2;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 15px 46px;
+}
+.nav_holder nav ul li a:hover, .active_nav, .nav_holder nav ul li:hover > a {
+	background-color: #222728;
+}
+.nav_holder nav ul li:hover > ul {
+	display: block;
+}
+.nav_holder nav ul ul {
+	display: none;
+	width: 245px;
+	position: absolute;
+	z-index: 2;
+}
+.nav_holder nav ul ul li {
+	width: 100%;
+	float: none;
+	font-family: 'calibriregular';
+	text-transform: none;
+	font-size: 15px;
+	font-weight: normal;
+	border-top: 1px solid #353c3e;
+	border-bottom: 1px solid #121415;
+	position: relative;
+}
+.nav_holder nav ul ul li:first-child {
+	border-top: 0px none;
+}
+.nav_holder nav ul ul li:last-child {
+	border-bottom: 0px none;
+}
+.nav_holder nav ul ul li a {
+	display: block;
+	padding: 10px;
+	background: url(../images/dropdown_bullet.png) no-repeat 15px center;
+	background-color: #222728;
+	padding-left: 28px;
+}
+.nav_holder nav ul ul li a:hover, .nav_holder nav ul ul li:hover > a {
+	background-color: #01afd2;
+}
+.nav_holder nav ul ul ul {
+	top: 25px;
+	left: 80%;
+}
+.shadow {
+	height: 13px;
+	background: url(../images/shadow.png) no-repeat top center;
+}
+/* ========== Menu Bar CSS Rules Ends ========== */
+/*******************************************************************/
+/* ========== Header CSS Rules Starts ========== */
+header {
+	width: 1200px;
+	margin: auto;
+	padding:0 0 10px 0;
+}
+.logo {
+	margin-top: 10px;
+}
+.call_us {
+	background: url(../images/caller_icon.png) no-repeat left center;
+	padding-left: 75px;
+	font-size: 26px;
+	color: #323a45;
+	line-height: 34px;
+	font-family: 'ralewaylight';
+}
+.call_us span {
+	color: #01afd2;
+	display: block;
+}
+/* ========== Header CSS Rules Ends ========== */
+/*******************************************************************/
+/* ========== Slider CSS Rules Starts ========== */
+.slider_holder {
+	position: relative;
+	height: 550px;
+}
+/* ========== Slider CSS Rules Ends ========== */
+/*******************************************************************/
+/* ========== Blue Strip CSS Rules Starts ========== */
+.main_icons {
+	width: 1150px;
+	margin: auto;
+	color: #ffffff;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 120px;
+}
+.main_icons ul li {
+	text-align: center;
+	width: 230px;
+	float: left;
+	padding-left: 2px;
+	padding: 35px 0;
+}
+.main_icons ul li a {
+	display: block;
+	width: 160px;
+	margin: auto;
+	color: #ffffff;
+	text-decoration: none;
+}
+.main_icons ul li:first-child {
+	background: none;
+	padding-left: 0;
+}
+.main_icons ul li:hover .services_icon {
+	background-color: rgba(255, 255, 255, 1.0);
+}
+.main_icons ul li:hover .more_btns {
+	background-position: left center;
+	background-color: #333333;
+}
+.main_icons ul li h3 {
+	font-family: 'ralewaylight';
+	text-transform: uppercase;
+	font-size: 25px;
+	line-height: 35px;
+	margin-bottom: 10px;
+	text-shadow: 0 0 5px #000000;
+}
+.more_btns {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 33px;
+	height: 33px;
+	background: url(../images/grey_arrow.png) no-repeat right center #ffffff;
+}
+.services_icon, .main_icons ul li span {
+	-webkit-border-radius: 100%;
+	 -khtml-border-radius: 100%;
+	   -moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		 -o-border-radius: 100%;
+			border-radius: 100%;
+}
+.services_icon {
+	width: 150px;
+	height: 150px;
+	border: 5px solid #ffffff;
+	margin: auto;
+	background: url(../images/services_icons.png) no-repeat 0 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 15px;
+}
+.camera_icon {
+	background-position: -155px 0;
+}
+.projects_icon {
+	background-position: 0 -155px;
+}
+.export_icon {
+	background-position: -155px -155px;
+}
+/* ========== Blue Strip CSS Rules Ends ========== */
+/*******************************************************************/
+/* ========== Middle Content Area CSS Starts ========== */
+.content_wrapper {
+	width: 1200px;
+	margin: auto;
+	padding-bottom: 30px;
+	border-bottom: 10px solid #01afd2;
+}
+.section_1 {
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 35px;
+	padding-top: 35px;
+}
+.section_2 {
+	border-top: 1px solid #ffffff;
+	padding-top: 35px;
+}
+.welcome_pic {
+	margin-right: 35px;
+}
+.welcome_pic img {
+	padding: 10px;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 0 8px 0 #cccccc;
+	 -khtml-box-shadow: 0 0 8px 0 #cccccc;
+	   -moz-box-shadow: 0 0 8px 0 #cccccc;
+		-ms-box-shadow: 0 0 8px 0 #cccccc;
+		 -o-box-shadow: 0 0 8px 0 #cccccc;
+			box-shadow: 0 0 8px 0 #cccccc;
+	-webkit-border-radius: 100%;
+	 -khtml-border-radius: 100%;
+	   -moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		 -o-border-radius: 100%;
+			border-radius: 100%;
+}
+.welcome_matter {
+	width: 924px;
+	margin-top: 10px;
+}
+.master_titles {
+	font-family: 'ralewaylight';
+	font-size: 32px;
+	color: #01afd2;
+	margin-bottom: 15px;
+}
+.welcome_matter p {
+	font-family: 'calibriitalic';
+	line-height: 32px;
+}
+.welcome_matter a {
+	color: #01afd2;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+.welcome_matter a:hover {
+	color: #323a45;
+	border-bottom-color: #323a45;
+}
+/* Latest News */
+.latest_news {
+	width: 800px;
+}
+.latest_news ul {
+	margin-left: -20px;
+}
+.latest_news ul li {
+	display: inline-block;
+	*display: inline;
+	float: left;
+	width: 380px;
+	margin-left: 20px;
+}
+.latest_news ul li .news_date {
+	width: 60px;
+	padding: 8px 0;
+	margin-top: 10px;
+	text-align: center;
+	background-color: #323a45;
+	color: #ffffff;
+	font-family: 'ralewaylight';
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+.latest_news ul li .news_date span {
+	display: block;
+	font-size: 32px;
+}
+.latest_news ul li .news_content {
+	width: 298px;
+	font-family: 'calibriitalic';
+}
+.latest_news ul li .news_content p {
+	margin-bottom: 10px;
+}
+.latest_news ul li .news_content a {
+	font-family: 'calibribold';
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #01afd2;
+	text-decoration: none;
+}
+.latest_news ul li .news_content a:hover {
+	color: #323a45;
+}
+.latest_news ul li .news_content a > span {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 33px;
+	height: 33px;
+	vertical-align: middle;
+	margin-right: 8px;
+	background: url(../images/white_arrow.png) no-repeat center right #323a45;
+	-webkit-border-radius: 100%;
+	 -khtml-border-radius: 100%;
+	   -moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		 -o-border-radius: 100%;
+			border-radius: 100%;
+}
+.latest_news ul li .news_content a:hover > span {
+	background-position: center left;
+	background-color: #01afd2;
+}
+/* Latest News */
+
+/* Range Of Products */
+.range_products {
+	width: 350px;
+}
+.range_products ul li {
+	height: 213px;
+}
+.range_products ul li .product_pic {
+	width: 105px;
+	margin-right: 15px;
+	text-align: center;
+}
+.range_products ul li .product_content {
+	width: 228px;
+	font-family: 'calibriitalic';
+}
+.range_products ul li .product_content h2 {
+	font-family: 'ralewaylight';
+	font-size: 22px;
+	color: #323a45;
+	margin-bottom: 3px;
+}
+.range_products ul li .product_content p {
+	color: #01afd2;
+	margin-bottom: 0px;
+}
+.range_products ul li .product_content ul {
+	margin-left: 18px;
+	margin-bottom: 12px;
+	list-style-image: url(../images/tick_icon.png);
+}
+.range_products ul li .product_content .view_btn {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 8px 20px 10px 20px;
+	background-color: #323a45;
+	-webkit-border-radius: 6px;
+	 -khtml-border-radius: 6px;
+	   -moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		 -o-border-radius: 6px;
+			border-radius: 6px;
+}
+.range_products ul li .product_content ul li {
+	height: auto;
+}
+.range_products ul li .product_content .view_btn:hover {
+	background-color: #01afd2;
+	padding: 8px 30px 10px 30px;
+}
+/* Range Of Products */
+.banner_holder {
+	height: 200px;
+	background: url(../images/inner_banner.jpg) no-repeat top center;
+}
+.banner_holder .banner {
+	width: 1200px;
+	margin: auto;
+	padding-top: 80px;
+}
+.banner_holder .banner h1 {
+	font-family: 'ralewaylight';
+	font-size: 50px;
+	line-height: 50px;
+	text-shadow: 0 0 4px #333333;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.inner_content_left {
+	width: 800px;
+}
+.content_grid {
+	display: table;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.content_grid ul.products
+{
+	list-style-image:none;
+	margin:0;
+	padding:0;
+}
+.content_grid ul.products li
+{
+	float:left;
+	width:24%;
+	margin-right:1%;
+	box-shadow:0px 1px 2px 2px #ccc;
+	margin-bottom:2%;
+	text-align:center;
+	text-transform:uppercase;
+	color:black;
+}
+.content_grid ul.products li .li_div
+{
+	background-color:#007e97;
+	height:30px;
+	color:white;
+	text-align:center;
+	text-transform:uppercase;
+}
+.content_grid ul.products li .li_div a
+{
+	color:white;
+	text-decoration:none;
+}
+.content_grid ul.products li:nth-child(4)
+{
+	margin-right:0;
+}
+
+.prod_desc
+{
+	width:100%;
+}
+.prod_desc .prod_img
+{
+	float:left;
+	width:35%;
+	box-shadow:0px 1px 2px 2px #ccc;
+	text-align:center;
+	margin-top:1.5%;
+}
+.prod_desc .prod_des
+{
+	width:58%;
+	float:right;
+}
+.prod_desc .prod_des .span1
+{
+	color:black;
+	font-size:20px;
+	text-transform:uppercase;
+}
+.inner_content_left ul {
+	list-style-image: url(../images/tick_icon.png);
+	margin-left: 18px;
+	margin-bottom: 20px;
+}
+.inner_content_left ul li a {
+	color: #666666;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+.inner_content_left ul li a:hover {
+	color: #01AFD2;
+	border-bottom-color: #01AFD2;
+}
+.medium_titles {
+	font-family: 'calibriregular';
+	font-size: 25px;
+	color: #666666;
+	margin-bottom: 6px;
+}
+.no_border {
+	border: 0px none;
+}
+.inner_pic {
+	margin-right: 15px;
+	margin-top: 6px;
+}
+.pic_style {
+	padding: 6px;
+	background-color: #ffffff;
+	margin: 10px 0 20px 0;
+	-webkit-box-shadow: 0 0 5px 0 #cccccc;
+	 -khtml-box-shadow: 0 0 5px 0 #cccccc;
+	   -moz-box-shadow: 0 0 5px 0 #cccccc;
+		-ms-box-shadow: 0 0 5px 0 #cccccc;
+		 -o-box-shadow: 0 0 5px 0 #cccccc;
+			box-shadow: 0 0 5px 0 #cccccc;
+	-webkit-border-radius: 6px;
+	 -khtml-border-radius: 6px;
+	   -moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		 -o-border-radius: 6px;
+			border-radius: 6px;
+}
+.highlighted_bullets {
+	list-style-position: inside;
+	margin-left: 0px !important;
+}
+.highlighted_bullets li {
+	border-bottom: 1px dashed #cccccc;
+	padding: 10px 0;
+}
+.highlighted_bullets li:first-child {
+	border-top: 1px dashed #cccccc;
+}
+.highlighted_bullets li:hover {
+	background-color: #ffffff;
+	padding-left: 15px;
+}
+/* Sidebar CSS Rules Starts */
+.sidebar {
+	width: 350px;
+}
+.sidebar .range_products {
+	width: auto;
+}
+.sidebar_menus {
+	display: none;
+	list-style-image: none !important;
+	margin-left: 0 !important;
+}
+.sidebar_menus li {
+	background: url(../images/tick_icon.png) no-repeat left 16px;
+	padding-left: 17px;
+}
+/* Sidebar CSS Rules Ends */
+.field_holder {
+	margin-right: 7px;
+	margin-bottom: 7px;
+	float: left;
+}
+.field_holder input[type="text"], .field_holder textarea {
+	width: 232px;
+	font-family: 'calibriregular';
+	font-size: 15px;
+	padding: 12px;
+	color: #7e7e7e;
+	border: 1px dashed #cccccc;
+	resize: none;
+}
+.field_holder input[type="text"]:focus, .field_holder textarea:focus {
+	border-color: #01AFD2;
+	border-style: solid;
+}
+.field_holder .long_field, .field_holder textarea {
+	width: 762px !important;
+}
+.field_holder input[type="submit"] {
+	background-color: #01AFD2;
+	color: #ffffff;
+	font-family: 'calibribold';
+	font-size: 16px;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	border: 0px none;
+	cursor: pointer;
+}
+.field_holder input[type="submit"]:hover {
+	background-color: #323A45;
+	padding: 12px 40px;
+}
+.content_grid iframe {
+	width: 765px;
+	height: 300px;
+	padding: 15px;
+	background-color: #ffffff;
+	border: 1px dashed #cccccc;
+}
+.iframe_shadow {
+	background: url(../images/shadow.png) no-repeat top center;
+	height: 10px;
+	-webkit-background-size: 100%;
+	   -moz-background-size: 100%;
+	    	background-size: 100%;
+}
+.highlight_paragraph span {
+	display: block;
+	font-family: 'calibriitalic';
+	color: #01AFD2;
+}
+.remove_space {
+	margin: 0px;
+}
+.product_pic {
+	margin-right: 25px;
+}
+.product_detail {
+	margin-top: 5px;
+	width: 540px;
+}
+.divider {
+	height: 0px;
+	border-top: 1px dashed #cccccc;
+	margin: 25px 0;
+}
+.base_btn {
+	font-family: 'calibriregular';
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 13px 25px;
+	background-color: #01AFD2;
+	-webkit-border-radius: 6px;
+	 -khtml-border-radius: 6px;
+	   -moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		 -o-border-radius: 6px;
+			border-radius: 6px;
+}
+.base_btn:hover {
+	background-color: #323A45;
+	padding: 13px 35px;
+}
+.resume_field_holder {
+	float: left;
+	background-color: #ffffff;
+	border: 1px dashed #cccccc;
+	padding: 20px;
+}
+.resume_field_holder h5 {
+	font-family: 'ralewaylight';
+	color: #01AFD2;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.resume_field_holder input[type="file"], .resume_field_holder textarea {
+	width: 300px;
+	background-color: #f8f8f8;
+	border: 1px dashed #cccccc;
+	padding: 10px;
+	margin-bottom: 18px;
+	font-family: 'calibriregular';
+	font-size: 15px;
+	color: #666666;
+}
+.resume_field_holder textarea {
+	width: 724px;
+	margin-bottom: 6px;
+	resize: none;
+}
+.resume_field_holder input[type="file"]:focus, .resume_field_holder textarea:focus {
+	border-color: #01AFD2;
+	border-style: solid;
+	background-color: #ffffff;
+}
+.faq_filters {
+	margin-right: 6px;
+}
+.faq_filters select {
+	width: 232px;
+	font-family: 'calibriregular';
+	font-size: 15px;
+	padding: 12px;
+	color: #7e7e7e;
+	border: 1px dashed #cccccc;
+}
+.faq_filters select {
+	width: 232px;
+	font-family: 'calibriregular';
+	font-size: 15px;
+	padding: 12px;
+	color: #7e7e7e;
+	border: 1px dashed #cccccc;
+}
+.faq_filters select:focus {
+	border-color: #01AFD2;
+	border-style: solid;
+}
+.faq_filters input[type="submit"], .faq_filters input[type="button"] {
+	background-color: #01AFD2;
+	color: #ffffff;
+	font-family: 'calibribold';
+	font-size: 16px;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	border: 0px none;
+	cursor: pointer;
+}
+.faq_filters input[type="submit"]:hover, .faq_filters input[type="button"]:hover {
+	background-color: #323A45;
+	padding: 12px 40px;
+}
+.faq_content {
+	margin-bottom: 40px;
+}
+.faq_content h5 {
+	font-family: 'ralewaylight';
+	font-size: 20px;
+	color: #01AFD2;
+}
+.faq_content h5:before {
+	content: "Q: "
+}
+/* ========== Middle Content Area CSS Ends ========== */
+/*******************************************************************/
+/* ========== Footer Area CSS Rules Starts ========== */
+footer {
+	background-color: #323a45;
+}
+footer section {
+	width: 1200px;
+	margin: auto;
+	display: table;
+}
+footer section .footer_content {
+	font-family: 'calibribold';
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #647388;
+	padding: 40px 0;
+}
+footer section .footer_content p {
+	margin-bottom: 6px;
+}
+footer section .footer_content ul li {
+	display: inline-block;
+	border-left: 1px solid #46515f;
+	line-height: 20px;
+	padding: 0 20px;
+}
+footer section .footer_content ul li:first-child {
+	border-left: 0px none;
+}
+footer section .footer_content ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+footer section .footer_content ul li a:hover {
+	border-color: #01afd2;
+}
+footer section .social_icons {
+	width: 290px;
+	margin: auto;
+}
+footer section .center_bg {
+	width: 188px;
+	min-height: 80px;
+	background: url(../images/icon_holder_center.jpg) repeat-x top left;
+}
+footer section .center_bg ul {
+	width: 180px;
+	margin: auto;
+	margin-top: 16px;
+}
+footer section .center_bg ul li {
+	display: block;
+	float: left;
+	border-right: 1px solid #141516;
+	border-left: 1px solid #272e37;
+	padding: 10px 15px;
+}
+footer section .center_bg ul li:first-child {
+	border-left: 0px none;
+}
+footer section .center_bg ul li:last-child {
+	border-right: 0px none;
+}
+footer section .center_bg ul li a {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	background: url(../images/social_icons_srite.png) no-repeat 0 0;
+	vertical-align: middle;
+}
+footer section .center_bg ul li .facebook_icon {
+	width: 16px;
+	height: 33px;
+}
+footer section .center_bg ul li .facebook_icon:hover {
+	background-position: -18px 0;
+}
+footer section .center_bg ul li .twitter_icon {
+	width: 42px;
+	height: 33px;
+	background-position: 0 -35px;
+}
+footer section .center_bg ul li .twitter_icon:hover {
+	background-position: -44px -35px;
+}
+footer section .center_bg ul li .youtube_icon {
+	width: 27px;
+	height: 33px;
+	background-position: 0 -70px;
+}
+footer section .center_bg ul li .youtube_icon:hover {
+	background-position: -29px -70px;
+}
+footer section .social_icons .left_curve, footer section .social_icons .right_curve {
+	width: 51px;
+	height: 80px;
+}
+footer section .social_icons .left_curve {
+	background: url(../images/icon_holder_left.png) no-repeat top left;
+}
+footer section .social_icons .right_curve {
+	background: url(../images/icon_holder_right.png) no-repeat top right;
+}
+/* ========== Footer Area CSS Rules Ends ========== */
